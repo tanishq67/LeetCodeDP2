@@ -45,11 +45,17 @@ C O D E >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     
 ```
 Question 2: Number of Longest Increasing Subsequence { https://leetcode.com/problems/number-of-longest-increasing-subsequence/ }
-
+// do it in O(nlogn) as well try after day 10.. like a good boi.
 Logic :
 ```
+lets try to think of the problem as scracth may be we will be able to get more elegent and a compact solution.
+dp(i) => this will let me know the amount of max inc subseq are there. 
+However, with the knowledge of only index we wont be able to deduce if our current element is greater than or less than the last element we are taking so we need to loop through the array but where we will store the count as it wont give us any answer.
 
+So, lets change our defination and solve the question like finding the max increasing subsequence and then using its dp array we will get the answer. 
 
+Dp(i) => this will let me know the max inc subseq we got uptill now. But agian we need to the last element we had so we would need to loop through
+We can then while computing store the value in a map of each element how many times it came. it may addition n square space. Other way we can also do the above and keep count for our max that we got the space will be o(n).
 C O D E >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     
@@ -58,6 +64,7 @@ Question 3: Largest Divisible Subset { https://leetcode.com/problems/largest-div
 
 Logic :
 ```
+Not a dp equation rather more of a number theory question. Just use something like seive and ++ its multiples. that's it. If we have 1 in the set as well just add 1 to the answer and we are done.
 
 
 C O D E >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
